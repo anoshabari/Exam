@@ -15,7 +15,31 @@ import java.util.Scanner;
  */
 public class ArithmeticBase 
 {
- public double x,y;
+        {
+            public enum Operation {PLUS,MINUS,TIMES,DIVIDE};
+            private Operation operation; 
+            
+            public Arithmetic (Operation o)
+            {
+                operation = o; 
+            }
+
+    /**
+     * @return the operation
+     */
+    public Operation getOperation() {
+        return operation;
+    }
+
+    /**
+     * @param operation the operation to set
+     */
+    public void setOperation(Operation operation) {
+        this.operation = operation;
+    }
+        
+    }
+        public double x,y;
     double calculate(double x, double y) 
         {
         Scanner sc =new Scanner(System.in);
@@ -35,5 +59,4 @@ public class ArithmeticBase
                 throw new AssertionError("Unknown operations " + this);
         }
     }
-   
 }
