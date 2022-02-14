@@ -18,28 +18,21 @@ public class ArithmeticBase
         {
             public enum Operation {PLUS,MINUS,TIMES,DIVIDE};
             private Operation operation; 
+            public enum ValuesPLUS,MINUS,TIMES,DIVIDE};
+            private Operation operation; 
+            public enum Values(x,y);
             
-            public Arithmetic (Operation o)
-            {
-                operation = o; 
-            }
+           
+            private Operation operation;
+            private Values value;
 
-    /**
-     * @return the operation
-     */
-    public Operation getOperation() {
-        return operation;
-    }
-
-    /**
-     * @param operation the operation to set
-     */
-    public void setOperation(Operation operation) {
-        this.operation = operation;
-    }
-        
-    }
-        public double x,y;
+public ArithmeticBase()
+{
+    this.setOperation(getOperation());
+    this.setValue(getValue());
+}
+        private double x;
+        private double y;
     double calculate(double x, double y) 
         {
         Scanner sc =new Scanner(System.in);
@@ -59,4 +52,60 @@ public class ArithmeticBase
                 throw new AssertionError("Unknown operations " + this);
         }
     }
-}
+
+        /**
+         * @return the operation
+         */
+        public Operation getOperation() {
+            return operation;
+        }
+
+        /**
+         * @param operation the operation to set
+         */
+        public void setOperation(Operation operation) {
+            this.operation = operation;
+        }
+
+        /**
+         * @return the value
+         */
+        public Values getValue() {
+            return value;
+        }
+
+        /**
+         * @param value the value to set
+         */
+        public void setValue(Values value) {
+            this.value = value;
+        }
+
+        /**
+         * @return the x
+         */
+        public double getX() {
+            return x;
+        }
+
+        /**
+         * @param x the x to set
+         */
+        public void setX(double x) {
+            this.x = x;
+        }
+
+        /**
+         * @return the y
+         */
+        public double getY() {
+            return y;
+        }
+
+        /**
+         * @param y the y to set
+         */
+        public void setY(double y) {
+            this.y = y;
+        }
+    }
